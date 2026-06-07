@@ -18,7 +18,7 @@ export default function FinalCTA() {
           </a>
         </div>
         <div className="final-cta-trust">
-          Demo non ufficiale · Review manuale · Nessun pagamento interno · Solo 18+
+          Board non ufficiale · Review manuale · Nessun pagamento interno · Solo 18+
         </div>
       </div>
     </section>

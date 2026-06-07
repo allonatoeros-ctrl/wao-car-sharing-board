@@ -1,28 +1,39 @@
 /* WAO Car Sharing Board - Design System (Vanilla CSS) */
 
 :root {
-  --bg-color: #060608;
-  --bg-card: rgba(18, 18, 24, 0.7);
-  --bg-card-hover: rgba(26, 26, 36, 0.85);
-  --border-card: rgba(255, 255, 255, 0.06);
-  --border-card-hover: rgba(124, 77, 255, 0.3);
+  --bg: #05050A;
+  --bg-soft: #0B0714;
+  --panel: rgba(18, 14, 28, 0.78);
+  --violet: #8B5CF6;
+  --deep-violet: #4C1D95;
+  --teal: #14B8A6;
+  --cyan: #22D3EE;
+  --orange: #FF7A1A;
+  --gold: #F8C471;
+  --lime: #C6FF3D;
+
+  /* Mapped attributes for consistency and compatibility */
+  --bg-color: var(--bg);
+  --bg-card: var(--panel);
+  --bg-card-hover: rgba(26, 20, 40, 0.88);
+  --border-card: rgba(255, 255, 255, 0.05);
+  --border-card-hover: rgba(139, 92, 246, 0.35); /* Violet glow */
   
-  /* Palette Colori */
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
   
-  --primary-color: #7c4dff; /* Electric Violet */
-  --primary-glow: rgba(124, 77, 255, 0.15);
-  --secondary-color: #6366f1; /* Indigo */
-  --accent-color: #ccff00; /* Acid Lime */
-  --accent-glow: rgba(204, 255, 0, 0.2);
+  --primary-color: var(--violet);
+  --primary-glow: rgba(139, 92, 246, 0.12);
+  --secondary-color: var(--teal);
+  --accent-color: var(--lime);
+  --accent-glow: rgba(198, 255, 61, 0.25);
   
   /* Status Colori */
-  --color-cerco: #38bdf8; /* Light Blue */
-  --color-offro: #ccff00; /* Acid Lime */
-  --color-valuto: #fbbf24; /* Amber */
-  --color-safety: #10b981; /* Green */
+  --color-cerco: var(--cyan);
+  --color-offro: var(--orange);
+  --color-valuto: var(--gold);
+  --color-safety: var(--teal);
   
   /* Font Families */
   --font-title: 'Outfit', 'Inter', sans-serif;
@@ -86,11 +97,14 @@ a:focus-visible {
 .app-container::before {
   content: "";
   position: absolute;
-  top: 5%;
-  left: 10%;
-  width: 50vw;
-  height: 50vw;
-  background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 800px;
+  background: 
+    radial-gradient(circle at 15% 25%, rgba(20, 184, 166, 0.12) 0%, transparent 50%),   /* Teal (Natura/Festival) */
+    radial-gradient(circle at 85% 20%, rgba(255, 122, 26, 0.08) 0%, transparent 45%),    /* Orange (Sole/Caldo) */
+    radial-gradient(circle at 50% 45%, rgba(139, 92, 246, 0.15) 0%, transparent 55%);   /* Violet (Cosmic/Glow) */
   z-index: -1;
   pointer-events: none;
 }
@@ -98,11 +112,13 @@ a:focus-visible {
 .app-container::after {
   content: "";
   position: absolute;
-  bottom: 15%;
-  right: 5%;
-  width: 60vw;
-  height: 60vw;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 700px;
+  background: 
+    radial-gradient(circle at 80% 80%, rgba(20, 184, 166, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 20% 60%, rgba(139, 92, 246, 0.08) 0%, transparent 60%);
   z-index: -1;
   pointer-events: none;
 }
@@ -133,11 +149,12 @@ a:focus-visible {
 
 .btn-primary {
   background-color: var(--accent-color);
-  color: #000;
+  color: #05050a;
+  font-weight: 700;
 }
 
 .btn-primary:hover {
-  background-color: #b3df00;
+  background-color: #d6ff66;
   box-shadow: 0 0 20px var(--accent-glow);
   transform: translateY(-1px);
 }
@@ -193,44 +210,51 @@ a:focus-visible {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  padding: 4px 8px;
-  border-radius: 4px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: var(--transition-fast);
 }
 
-.badge-demo {
-  background-color: rgba(255, 255, 255, 0.08);
-  color: var(--text-secondary);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+.badge-community {
+  background-color: rgba(20, 184, 166, 0.08);
+  color: var(--teal);
+  border: 1px solid rgba(20, 184, 166, 0.2);
+}
+
+.badge-unofficial {
+  background-color: rgba(139, 92, 246, 0.08);
+  color: var(--violet);
+  border: 1px solid rgba(139, 92, 246, 0.2);
 }
 
 .badge-18 {
-  background-color: rgba(239, 68, 68, 0.15);
-  color: #ef4444;
-  border: 1px solid rgba(239, 68, 68, 0.3);
+  background-color: rgba(255, 122, 26, 0.08);
+  color: var(--orange);
+  border: 1px solid rgba(255, 122, 26, 0.2);
 }
 
 .badge-safety-pill {
-  background-color: rgba(16, 185, 129, 0.1);
+  background-color: rgba(20, 184, 166, 0.08);
   color: var(--color-safety);
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(20, 184, 166, 0.2);
 }
 
 .badge-cerco {
-  background-color: rgba(56, 189, 248, 0.15);
+  background-color: rgba(34, 211, 238, 0.08);
   color: var(--color-cerco);
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  border: 1px solid rgba(34, 211, 238, 0.2);
 }
 
 .badge-offro {
-  background-color: rgba(204, 255, 0, 0.1);
-  color: var(--accent-color);
-  border: 1px solid rgba(204, 255, 0, 0.2);
+  background-color: rgba(255, 122, 26, 0.08);
+  color: var(--color-offro);
+  border: 1px solid rgba(255, 122, 26, 0.2);
 }
 
 .badge-valuto {
-  background-color: rgba(251, 191, 36, 0.15);
+  background-color: rgba(248, 196, 113, 0.08);
   color: var(--color-valuto);
-  border: 1px solid rgba(251, 191, 36, 0.3);
+  border: 1px solid rgba(248, 196, 113, 0.2);
 }
 
 /* Layout utility sections */
@@ -266,23 +290,23 @@ a:focus-visible {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(124, 77, 255, 0.2);
+  background: rgba(139, 92, 246, 0.25);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(124, 77, 255, 0.4);
+  background: rgba(139, 92, 246, 0.45);
 }
 
 /* Header component styles */
 .header-wrapper {
-  border-bottom: 1px solid var(--border-card);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgba(6, 6, 8, 0.8);
+  background-color: rgba(5, 5, 10, 0.82);
 }
 
 .header-container {
@@ -325,6 +349,8 @@ a:focus-visible {
   position: relative;
   padding: 80px 0 60px 0;
   text-align: center;
+  border-radius: 24px;
+  background: radial-gradient(circle at 50% 50%, rgba(11, 7, 20, 0.45) 0%, transparent 80%);
 }
 
 .hero-badges {
@@ -340,7 +366,7 @@ a:focus-visible {
   font-weight: 800;
   line-height: 1.15;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, #fff 40%, var(--primary-color) 100%);
+  background: linear-gradient(135deg, #ffffff 45%, var(--cyan) 85%, var(--violet) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -482,21 +508,72 @@ a:focus-visible {
 }
 
 .card-cerco-theme {
-  border-top: 3px solid var(--color-cerco);
+  position: relative;
+  border: 1px solid rgba(20, 184, 166, 0.15) !important;
+  border-top: none !important;
+  overflow: hidden;
+}
+
+.card-cerco-theme::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--teal), var(--violet));
 }
 
 .card-cerco-theme:hover {
-  border-color: rgba(56, 189, 248, 0.45) !important;
-  box-shadow: 0 8px 32px rgba(56, 189, 248, 0.08);
+  border-color: rgba(139, 92, 246, 0.3) !important;
+  box-shadow: 0 8px 32px rgba(20, 184, 166, 0.08), 0 0 16px rgba(139, 92, 246, 0.05);
+}
+
+.card-cerco-theme .btn-secondary {
+  background-color: rgba(20, 184, 166, 0.05);
+  color: var(--cyan);
+  border: 1px solid rgba(20, 184, 166, 0.3);
+}
+
+.card-cerco-theme .btn-secondary:hover {
+  background-color: rgba(20, 184, 166, 0.15);
+  border-color: var(--cyan);
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.2);
+  color: #fff;
 }
 
 .card-offro-theme {
-  border-top: 3px solid var(--accent-color);
+  position: relative;
+  border: 1px solid rgba(255, 122, 26, 0.15) !important;
+  border-top: none !important;
+  overflow: hidden;
+}
+
+.card-offro-theme::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--orange), var(--gold));
 }
 
 .card-offro-theme:hover {
-  border-color: rgba(204, 255, 0, 0.45) !important;
-  box-shadow: 0 8px 32px rgba(204, 255, 0, 0.08);
+  border-color: rgba(248, 196, 113, 0.3) !important;
+  box-shadow: 0 8px 32px rgba(255, 122, 26, 0.08), 0 0 16px rgba(248, 196, 113, 0.05);
+}
+
+.card-offro-theme .btn-primary {
+  background-color: var(--lime);
+  color: #05050A;
+  font-weight: 700;
+  border: 1px solid transparent;
+}
+
+.card-offro-theme .btn-primary:hover {
+  background-color: #d6ff66;
+  box-shadow: 0 0 20px rgba(198, 255, 61, 0.45);
 }
 
 .cta-disclaimer-note {
@@ -619,12 +696,12 @@ a:focus-visible {
 
 /* SafetySection component styles */
 .safety-wrapper {
-  background: linear-gradient(180deg, rgba(239, 68, 68, 0.03) 0%, transparent 100%);
-  border: 1px solid rgba(239, 68, 68, 0.15) !important;
+  background: linear-gradient(180deg, rgba(255, 122, 26, 0.03) 0%, transparent 100%);
+  border: 1px solid rgba(255, 122, 26, 0.15) !important;
 }
 
 .safety-wrapper:hover {
-  border-color: rgba(239, 68, 68, 0.3) !important;
+  border-color: rgba(255, 122, 26, 0.3) !important;
 }
 
 .safety-grid {
@@ -672,12 +749,12 @@ a:focus-visible {
 }
 
 .safety-alert-box {
-  background-color: rgba(239, 68, 68, 0.08);
-  border: 1px solid rgba(239, 68, 68, 0.2);
+  background-color: rgba(255, 122, 26, 0.06);
+  border: 1px solid rgba(255, 122, 26, 0.2);
   border-radius: 8px;
   padding: 16px;
   font-size: 13px;
-  color: #fca5a5;
+  color: #ffedd5;
   margin-top: 24px;
   line-height: 1.6;
 }
@@ -711,8 +788,8 @@ a:focus-visible {
   border-radius: 20px;
   padding: 60px 20px;
   margin: 40px 0;
-  border: 1px solid var(--border-card);
-  background: radial-gradient(circle at center, rgba(124, 77, 255, 0.08) 0%, transparent 80%);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: radial-gradient(circle at center, rgba(139, 92, 246, 0.1) 0%, transparent 80%);
 }
 
 .final-cta-section h2 {
@@ -747,9 +824,9 @@ a:focus-visible {
 
 /* Footer component styles */
 .footer-wrapper {
-  border-top: 1px solid var(--border-card);
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
   padding: 40px 0;
-  background-color: #030305;
+  background-color: var(--bg-soft);
   margin-top: auto;
 }
 

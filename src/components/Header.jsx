@@ -7,7 +7,7 @@ export default function Header() {
         <div className="header-brand">
           <div className="brand-title">
             🚗 WAO Car Sharing Board
-            <span className="badge badge-demo">Demo non ufficiale</span>
+            <span className="badge badge-unofficial">NON UFFICIALE</span>
           </div>
           <span className="brand-subtitle">powered by BlaBlaParty</span>
         </div>

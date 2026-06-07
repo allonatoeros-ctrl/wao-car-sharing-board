@@ -4,8 +4,8 @@ export default function Hero() {
   return (
     <section className="hero-section container">
       <div className="hero-badges">
-        <span className="badge badge-demo">Community Experiment</span>
-        <span className="badge badge-demo">Non ufficiale</span>
+        <span className="badge badge-community">COMMUNITY BOARD</span>
+        <span className="badge badge-unofficial">NON UFFICIALE</span>
         <span className="badge badge-18">18+</span>
       </div>
       
@@ -26,7 +26,7 @@ export default function Hero() {
       </div>
       
       <div className="hero-trust">
-        Solo 18+ · No pagamenti interni · No viaggi organizzati · Demo non ufficiale
+        Solo 18+ · No pagamenti interni · No viaggi organizzati · Board non ufficiale
       </div>
     </section>
   );

@@ -10,7 +10,7 @@ export default function Footer() {
         </div>
         
         <div className="footer-disclaimers">
-          <p>Demo non ufficiale / Community Experiment.</p>
+          <p>Piattaforma non ufficiale / Community Board.</p>
           <p>
             Questo progetto non è in alcun modo affiliato, approvato, sponsorizzato o gestito dagli organizzatori ufficiali di WAO Festival. 
             Nessun logo o marchio registrato del festival è utilizzato in questa pagina.
