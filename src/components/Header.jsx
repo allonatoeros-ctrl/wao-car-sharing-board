@@ -1,5 +1,4 @@
 import React from 'react';
-import { FORM_URL } from '../config/links';
 
 export default function Header() {
   return (
@@ -13,7 +12,7 @@ export default function Header() {
           <span className="brand-subtitle">powered by BlaBlaParty</span>
         </div>
         <div className="header-actions">
-          <a href={FORM_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">
+          <a href="#cta-section" className="btn btn-primary btn-sm">
             Cerco / offro passaggio
           </a>
         </div>

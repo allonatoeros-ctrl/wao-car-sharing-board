@@ -16,9 +16,9 @@ export default function App() {
       <Header />
       <main>
         <Hero />
+        <RideTypeCards />
         <WhyBoard />
         <HowItWorks />
-        <RideTypeCards />
         <BoardPreview />
         <SafetySection />
         <CommunitySection />

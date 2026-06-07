@@ -33,6 +33,10 @@
   --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Base resets & styles */
 * {
   box-sizing: border-box;
@@ -461,33 +465,16 @@ a:focus-visible {
 }
 
 .ride-card p.desc {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--text-secondary);
-  margin-bottom: 24px;
-  min-height: 44px;
-}
-
-.ride-card-fields {
-  list-style: none;
+  line-height: 1.6;
   margin-bottom: 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  flex-grow: 1;
+  min-height: 48px;
 }
 
-.ride-card-fields li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 14px;
-}
-
-.bullet-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--primary-color);
+.ride-card-actions {
+  margin-top: auto;
+  width: 100%;
 }
 
 .ride-card .btn {
@@ -498,8 +485,30 @@ a:focus-visible {
   border-top: 3px solid var(--color-cerco);
 }
 
+.card-cerco-theme:hover {
+  border-color: rgba(56, 189, 248, 0.45) !important;
+  box-shadow: 0 8px 32px rgba(56, 189, 248, 0.08);
+}
+
 .card-offro-theme {
   border-top: 3px solid var(--accent-color);
+}
+
+.card-offro-theme:hover {
+  border-color: rgba(204, 255, 0, 0.45) !important;
+  box-shadow: 0 8px 32px rgba(204, 255, 0, 0.08);
+}
+
+.cta-disclaimer-note {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
 }
 
 /* BoardPreview component styles */
@@ -717,8 +726,16 @@ a:focus-visible {
   margin: 0 auto 32px auto;
 }
 
-.final-cta-section .btn {
+.final-cta-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
   max-width: 320px;
+  margin: 0 auto 24px auto;
+}
+
+.final-cta-actions .btn {
   width: 100%;
 }
 
@@ -841,6 +858,18 @@ a:focus-visible {
     grid-template-columns: repeat(2, 1fr);
   }
   
+  /* Final CTA responsive */
+  .final-cta-actions {
+    flex-direction: row;
+    justify-content: center;
+    max-width: none;
+  }
+  
+  .final-cta-actions .btn {
+    width: auto;
+    min-width: 240px;
+  }
+
   /* Footer */
   .footer-content {
     flex-direction: row;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { FORM_URL } from '../config/links';
 
 export default function Hero() {
   return (
@@ -18,7 +17,7 @@ export default function Hero() {
       </p>
       
       <div className="hero-actions">
-        <a href={FORM_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+        <a href="#cta-section" className="btn btn-primary">
           Cerco / offro passaggio
         </a>
         <a href="#how-it-works" className="btn btn-secondary">
