@@ -1,0 +1,80 @@
+export const boardPreview = [
+  {
+    id: "preview-001",
+    type: "OFFRO",
+    route: "Milano → WAO",
+    status: "Compatibilità possibile",
+    outbound: "Andata 14 agosto",
+    returnDate: "Ritorno 18 agosto",
+    seats: "2 posti disponibili",
+    luggage: "Spazio bagagli medio",
+    stops: "Possibile tappa Bologna",
+    vibe: "Music-first / tranquillo",
+    note: "Ideale per chi parte dal Nord e ha bisogno anche del ritorno."
+  },
+  {
+    id: "preview-002",
+    type: "CERCO",
+    route: "Roma → WAO",
+    status: "Nuova richiesta",
+    outbound: "Andata 14 agosto",
+    returnDate: "Ritorno 18 agosto",
+    seats: "1 posto cercato",
+    luggage: "Zaino + tenda",
+    stops: "Può raggiungere zona raccordo / stazione",
+    vibe: "Social / flessibile",
+    note: "Buona compatibilità con auto da Roma o Centro Italia."
+  },
+  {
+    id: "preview-003",
+    type: "CERCO",
+    route: "Perugia → WAO",
+    status: "Da ordinare",
+    outbound: "Andata flessibile",
+    returnDate: "Ritorno da definire",
+    seats: "1 posto cercato",
+    luggage: "Bagaglio leggero",
+    stops: "Può arrivare a Orvieto",
+    vibe: "Tranquillo / no drama",
+    note: "Potenziale match con tratte da Umbria, Toscana o Roma."
+  },
+  {
+    id: "preview-004",
+    type: "OFFRO",
+    route: "Grosseto → WAO",
+    status: "Gruppo possibile",
+    outbound: "Andata 14 agosto",
+    returnDate: "Ritorno 18 agosto",
+    seats: "1 posto disponibile",
+    luggage: "Spazio tenda ok",
+    stops: "Tappa possibile zona Orvieto",
+    vibe: "Flessibile / festival mood",
+    note: "Utile per persone in Toscana o lungo la tratta verso il festival."
+  },
+  {
+    id: "preview-005",
+    type: "VALUTO",
+    route: "Bologna → WAO",
+    status: "In attesa dettagli",
+    outbound: "Andata 14 o 15 agosto",
+    returnDate: "Ritorno flessibile",
+    seats: "1-2 persone",
+    luggage: "Zaino / bagaglio leggero",
+    stops: "Può unirsi a auto da Nord Italia",
+    vibe: "Music-first / easy",
+    note: "Esempio utile per chi non ha ancora piano definitivo ma vuole essere ordinato nella board."
+  },
+  {
+    id: "preview-006",
+    type: "OFFRO",
+    route: "Firenze → WAO",
+    status: "Compatibilità possibile",
+    outbound: "Andata 14 agosto",
+    returnDate: "Ritorno da confermare",
+    seats: "2 posti disponibili",
+    luggage: "Spazio bagagli limitato",
+    stops: "Tappe brevi possibili",
+    vibe: "Tranquillo / puntuale",
+    note: "Esempio per chi offre ma deve ancora chiarire ritorno e spazio."
+  }
+];
