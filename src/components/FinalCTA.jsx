@@ -5,10 +5,9 @@ export default function FinalCTA() {
   return (
     <section className="container section-padding">
       <div className="final-cta-section">
-        <h2>Vuoi metterti in viaggio?</h2>
+        <h2>Stai cercando o offrendo un passaggio?</h2>
         <p>
-          Lascia le specifiche del tuo itinerario o le tue necessità di trasporto. 
-          Ti aiuteremo a ordinare e trovare possibili combinazioni compatibili per viaggiare insieme.
+          Lascia i dettagli nel form. Se emergono tratte compatibili, sarà più semplice creare ordine invece di inseguire messaggi nella chat.
         </p>
         <a href={FORM_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
           Compila il form car sharing

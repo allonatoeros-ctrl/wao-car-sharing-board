@@ -42,7 +42,7 @@ export default function RideTypeCards() {
             Per chi viaggia in auto, ha posti liberi a bordo e vuole condividere il tragitto e dividere le spese.
           </p>
           <ul className="ride-card-fields">
-            <li><span className="bullet-dot"></span> Città di partenza ed eventuale targa</li>
+            <li><span className="bullet-dot"></span> Città di partenza e tratta prevista</li>
             <li><span className="bullet-dot"></span> Tratta principale e tappe intermedie</li>
             <li><span className="bullet-dot"></span> Posti effettivamente disponibili</li>
             <li><span className="bullet-dot"></span> Spazio bagagli libero (es. "solo zaini")</li>

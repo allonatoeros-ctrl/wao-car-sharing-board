@@ -16,7 +16,7 @@ export default function SafetySection() {
           <div className="safety-rules-grid">
             <div className="safety-rule-card">
               <h4>🔞 Solo 18+</h4>
-              <p>L'utilizzo del servizio è consentito esclusivamente a persone maggiorenni. L'età viene verificata in fase di form.</p>
+              <p>L'utilizzo è riservato a persone maggiorenni. Il form richiede conferma esplicita di avere almeno 18 anni: nessuna verifica documentale viene effettuata nella V0.</p>
             </div>
             
             <div className="safety-rule-card">

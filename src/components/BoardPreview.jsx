@@ -12,7 +12,7 @@ export default function BoardPreview() {
   return (
     <section className="section-padding container">
       <div className="section-header">
-        <h2>Anteprima della bacheca</h2>
+        <h2>Board preview · esempi dimostrativi</h2>
         <p>Esempio dimostrativo di come le risposte al form vengono organizzate ed esposte ordinatamente.</p>
       </div>
 
@@ -22,7 +22,7 @@ export default function BoardPreview() {
             className={`filter-btn ${filter === 'ALL' ? 'active' : ''}`}
             onClick={() => setFilter('ALL')}
           >
-            Tutti gli annunci
+            Tutte le richieste
           </button>
           <button 
             className={`filter-btn ${filter === 'CERCO' ? 'active' : ''}`}
